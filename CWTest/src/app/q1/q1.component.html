@@ -1,1 +1,10 @@
-<p>q1 works!</p>
+<body
+[ngStyle]="{'background': true ? color : color }"
+>
+    <button 
+    class="mybtn"
+    style="padding: 20px;"
+    [matBadge]="count" matBadgePosition="after" matBadgeColor="warn"
+    [matBadgeHidden]="count==0" 
+    mat-raised-button color="accent" (click)="generateRandomColor()">Change Color</button>
+</body>
