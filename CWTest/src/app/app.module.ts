@@ -41,10 +41,18 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { Q1Component } from './q1/q1.component';
+import { Q2Component } from './q2/q2.component';
+import { Q3Component } from './q3/q3.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    Q1Component,
+    Q2Component,
+    Q3Component
   ],
   imports: [
     BrowserModule,
