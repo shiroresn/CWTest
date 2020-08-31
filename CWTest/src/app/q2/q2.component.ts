@@ -11,7 +11,6 @@ export class Q2Component implements OnInit {
 
   inputArrayString="";
   n;
-  pattern = /[0-9]/;
   showCalculations = false;
 
   inputArrayNumbers = new Array();
@@ -50,8 +49,6 @@ export class Q2Component implements OnInit {
      
       maxSumArray.push(tempSum);
     }
-
-    console.log(maxSumArray);
     
     return maxSumArray.sort((a,b) => b - a)[0];
   }
