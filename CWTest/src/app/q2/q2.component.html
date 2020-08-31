@@ -1,1 +1,43 @@
-<p>q2 works!</p>
+<form #f1="ngForm">
+    <mat-form-field class="grid2">
+        <mat-label>Enter comma seperated numbers</mat-label>
+        <textarea rows="3"
+        required
+        [(ngModel)]="inputArrayString"
+        name = "inputArrayString"
+        matInput placeholder="Ex. 1,2,3,4,5..."></textarea>
+        <mat-hint align="end">Please enter only numbers with comma!</mat-hint>
+
+      </mat-form-field>
+
+      <mat-form-field class="grid3">
+        <mat-label>Enter value of 'N'</mat-label>
+        <input required type="number"
+        name="n"
+        [(ngModel)]="n"
+        matInput placeholder="5">
+      </mat-form-field>
+
+      <button
+      [disabled]='!f1.valid'
+      mat-raised-button color="primary"
+      (click)="onCalculate()"
+      >Calculate</button>
+</form>
+
+<div class="grid1" *ngIf="showCalculations">
+    <p>
+        <b>
+            Answer:
+        </b>
+    </p>
+    <p>
+        Input Array : {{inputArrayNumbers | json}}
+    </p>
+    <p>
+        Number N : {{n}}
+    </p>
+    <p>
+        Final Answer : {{finalAnswer}}
+    </p>
+</div>
